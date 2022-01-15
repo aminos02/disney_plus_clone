@@ -1,10 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import ImgSlider from './ImgSlider'
+import Movies from './Recommends'
+import Viewers from './Viewers'
 const Home = () => {
     return (
         <Container>
             <ImgSlider/>
+            <Viewers/>
+            <Movies/>
         </Container>
     )
 }
