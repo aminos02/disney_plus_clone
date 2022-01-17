@@ -31,22 +31,16 @@ height: calc(100vh - 70px);
 display: flex;
 justify-content: center;
 align-items: center;
+background-position: top;
+background-size: cover;
+background-repeat: no-repeat;
+background-image:url("/images/login-background.jpg") ;
 
-&:before{
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image:url("/images/login-background.jpg") ;
-    position: absolute;
-    content: "";
-   inset: 0;
-    z-index: -1;
-}
 `
 
 const CTA=styled.div`    
 max-width:650px;
-padding: 80px 40px;
+padding: 80px 20px;
 width: 90%;
 display: flex;
 flex-direction: column;
