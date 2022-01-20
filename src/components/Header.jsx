@@ -55,10 +55,10 @@ useEffect(()=>{
       <img src="/images/logo.svg" alt="Disney+" />
     </Logo>
 
-    {!userName ? (
-      <Login onClick={handleAuth}>Login</Login>
-    ) : (
-      <>
+    
+      
+    {
+      userName && 
         <NavMenu>
           <a href="/home">
             <img src="/images/home-icon.svg" alt="HOME" />
@@ -84,15 +84,17 @@ useEffect(()=>{
             <img src="/images/series-icon.svg" alt="SERIES" />
             <span>SERIES</span>
           </a>
-        </NavMenu>
-        <SignOut>
+        </NavMenu>}
+        {!userName ? 
+      <Login onClick={handleAuth}>Login</Login>
+  
+        :<SignOut>
           <UserImg src={userPhoto} alt={userName} />
           <DropDown>
             <span onClick={handleAuth}>Sign out</span>
           </DropDown>
         </SignOut>
-      </>
-    )}
+      }
   </Nav>
 );
 };
@@ -106,9 +108,9 @@ const Nav = styled.nav`
   height: 70px;
   background-color: #090b13;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 36px;
+  justify-content: space-between;
+  padding: 0 1rem;
   letter-spacing: 16px;
   z-index: 3;
 `;
@@ -125,21 +127,24 @@ const Logo = styled.a`
     width: 100%;
   }
 `;
+
 const NavMenu=styled.div`
     display:flex;
-    flex:1;
-    padding:0 2rem;
+    justify-content: space-evenly;
     align-items:center;
+    flex: 1;
+    max-width: 880px;
     a{
         cursor:pointer;
         display:flex;
         align-items:center;
-        padding:0 12px;
+        /* padding:0 12px; */
         img{
-            height:20px;
+            height:25px;
         }
         span {
             font-size: 17px;
+            line-height: 100%;
             letter-spacing: 1.42px;
             position:relative;
             &:before{
@@ -163,6 +168,9 @@ const NavMenu=styled.div`
             }
         }
     }
+    @media (max-width: 810px) {
+    display: none;
+  }
 `
 
 
@@ -174,6 +182,7 @@ const Login = styled.a`
   border: 1px solid #f9f9f9;
   border-radius: 4px;
   transition: all 0.2s ease 0s;
+  cursor: pointer;
   &:hover {
     background-color: #f9f9f9;
     color: #000;
