@@ -83,9 +83,8 @@ const Background = styled.div`
   img {
     width: 100vw;
     height: 100vh;
-    @media (max-width: 768px) {
-      width: initial;
-    }
+    object-fit: cover;
+    
   }
 `;
 
