@@ -1,3 +1,19 @@
+# disney Clone Project Link: https://clone-disney.netlify.app/
+
+## Login Page 
+<img src="https://github.com/aminos02/disney_plus_clone/blob/main/log_large.PNG?raw=true"/>
+
+## Home Page Large Device
+<img src="https://github.com/aminos02/disney_plus_clone/blob/main/home_large.PNG?raw=true"/>
+
+## Home Page Phone Device
+<img src="https://github.com/aminos02/disney_plus_clone/blob/main/home_small.PNG?raw=true"/>
+
+
+## Detail Page
+<img src="https://github.com/aminos02/disney_plus_clone/blob/main/detail.PNG?raw=true"/>
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
