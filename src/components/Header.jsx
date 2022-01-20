@@ -60,7 +60,7 @@ useEffect(()=>{
     {
       userName && 
         <NavMenu>
-          <a href="/home">
+          <a>
             <img src="/images/home-icon.svg" alt="HOME" />
             <span>HOME</span>
           </a>

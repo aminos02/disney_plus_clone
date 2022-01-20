@@ -18,7 +18,7 @@ const Home = () => {
       "original":[],
       "trending":[],
   };
-  useEffect(async () => {
+  const getCollection=async()=>{
     const querySnapshot = await getDocs(collection(db, "movies"));
     querySnapshot.forEach((doc) => {
         movies[doc.data().type]=[...movies[doc.data().type], { id: doc.id, ...doc.data() }]         
@@ -26,6 +26,9 @@ const Home = () => {
     dispatch(
         setMovies({...movies})
     )
+  }
+  useEffect(() => {
+    getCollection();
   }, [userName]);
 
 

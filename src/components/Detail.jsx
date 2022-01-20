@@ -8,16 +8,19 @@ const Detail = () => {
   const { id } = useParams();
   const [detailData, setDetailData] = useState({});
 
-  useEffect(async () => {
+  const getMovie= async()=>{
     const docRef = doc(db, "movies", id);
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
       setDetailData(docSnap.data());
     } else {
-      // doc.data() will be undefined in this case
       console.log("No such document!");
     }
+  }
+  useEffect(() => {
+    getMovie();
+  
   }, [id]);
   return (
     <Container>
