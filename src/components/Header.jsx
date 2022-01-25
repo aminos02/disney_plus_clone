@@ -86,7 +86,10 @@ useEffect(()=>{
           </a>
         </NavMenu>}
         {!userName ? 
-      <Login onClick={handleAuth}>Login</Login>
+      <Login onClick={handleAuth}>
+        <GoogleImg  src="/images/google-login.jpg" alt="google icon" />
+        Login
+        </Login>
   
         :<SignOut>
           <UserImg src={userPhoto} alt={userName} />
@@ -172,11 +175,20 @@ const NavMenu=styled.div`
     display: none;
   }
 `
-
+const GoogleImg=styled.img`
+  height: 100%;
+  width: 100%;
+`
 
 const Login = styled.a`
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 8px 16px;
+
+background-color: rgba(0, 0, 0, 0.6);
+display: flex;
+justify-content: space-between;
+align-items: center;
+/* padding: 8px 16px; */
+width: 100px;
+height: 40px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   border: 1px solid #f9f9f9;
